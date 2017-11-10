@@ -20,7 +20,22 @@ public class LeadersInArray {
 		}
 
 	}
-
+	private void printLeadersEfficient(int arr[], int size)
+    {
+        int max_from_right =  arr[size-1];
+  
+        /* Rightmost element is always leader */
+        System.out.print(max_from_right + " ");
+      
+        for (int i = size-2; i >= 0; i--)
+        {
+            if (max_from_right < arr[i])
+            {           
+            max_from_right = arr[i];
+            System.out.print(max_from_right + " ");
+            }
+        }    
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -28,6 +43,7 @@ public class LeadersInArray {
 		int n = arr.length;
 		LeadersInArray l = new LeadersInArray();
 		l.printLeaders(arr, n);
+		l.printLeadersEfficient(arr, n);
 	}
 
 }
