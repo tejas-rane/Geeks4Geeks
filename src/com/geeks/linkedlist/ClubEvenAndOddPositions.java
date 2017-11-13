@@ -36,9 +36,6 @@ public class ClubEvenAndOddPositions {
 			else{
 				endingOnOdd = true;
 			}
-			/*if(count %2 == 0){
-				evenHeadRunner.
-			}*/
 		}
 		evenHeadRunner.next = oddHead;
 		if(endingOnEven)evenHeadRunner.next = null;// terminating the linked list
