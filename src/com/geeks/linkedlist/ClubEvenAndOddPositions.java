@@ -7,7 +7,14 @@ public class ClubEvenAndOddPositions {
 		if(head == null) {
 			System.out.println("LinkedList is empty");
 			return;
+		}else if(head.next == null){
+			System.out.println("LinkedList has just one element");
+			return;
+		}else if(head.next.next == null){
+			System.out.println("LinkedList has just two element, they are already at correct position");
+			return;
 		}
+		// more than 2 elements.
 		Node evenHead = head;
 		Node evenHeadRunner = head;
 		Node oddHead = evenHead.next;
