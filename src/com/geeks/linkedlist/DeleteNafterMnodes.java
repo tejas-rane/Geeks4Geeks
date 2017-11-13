@@ -4,17 +4,33 @@ import com.geeks.linkedlist.LinkedList.Node;
 
 public class DeleteNafterMnodes {
 	public static void deleteNNodesAfterMnodes(int n, int m , Node head){
+		if(head == null) {
+			System.out.println("LinkedList is empty");
+			return;
+		}
+		
+		
 		Node cutStart = head;
 		Node cutEnd = head;
 		int countUntil = m;
 		int deleteUntil = n;
 		
 		for(int i = 1;i< countUntil;i++ ){
+			if(cutStart != null && cutStart.next != null){
 			cutStart = cutStart.next;cutEnd = cutEnd.next;
+			}else{
+				System.out.println("values too high, list length is less than the range");
+				return;
+			}
 		}
 		
 		for(int i = 0;i<= deleteUntil;i++ ){
+			if(cutEnd != null && cutEnd.next != null){
 			cutEnd = cutEnd.next;
+			}else{
+				System.out.println("values too high, list length is less than the range");
+				return;
+			}
 		}
 		cutStart.next = cutEnd;
 		
