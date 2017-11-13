@@ -4,8 +4,38 @@ import com.geeks.linkedlist.LinkedList.Node;
 
 public class ClubEvenAndOddPositions {
 	private static void clubEvenAndOddPositions(Node head) {
-		// TODO Auto-generated method stub
-		
+		if(head == null) {
+			System.out.println("LinkedList is empty");
+			return;
+		}
+		Node evenHead = head;
+		Node evenHeadRunner = head;
+		Node oddHead = evenHead.next;
+		Node oddHeadRunner = evenHead.next;
+		boolean endingOnEven = false;
+		boolean endingOnOdd = false;
+		while(evenHeadRunner!=null && oddHeadRunner !=null && oddHeadRunner.next != null && evenHeadRunner.next != null) {
+			if(evenHeadRunner.next != null && evenHeadRunner.next.next!=null){
+			evenHeadRunner.next = evenHeadRunner.next.next;
+			evenHeadRunner = evenHeadRunner.next;
+			}
+			else{
+				endingOnEven = true;
+			}
+			if(oddHeadRunner.next != null && oddHeadRunner.next.next!=null){
+			oddHeadRunner.next = oddHeadRunner.next.next;
+			oddHeadRunner = oddHeadRunner.next;
+			}
+			else{
+				endingOnOdd = true;
+			}
+			/*if(count %2 == 0){
+				evenHeadRunner.
+			}*/
+		}
+		evenHeadRunner.next = oddHead;
+		if(endingOnEven)evenHeadRunner.next = null;// terminating the linked list
+		if(endingOnOdd)oddHeadRunner.next = null;// terminating the linked list
 	}
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
