@@ -25,11 +25,19 @@ public class SumWithBitwiseOperator {
 		
 		return a;
 	}
+	public int findComplement(int num) {
+		String binString = Integer.toBinaryString(num);
+		int len = binString.length();
+		int val = (int) Math.pow(2, len);
+		int nu = (num)^(val-1);
+        return nu;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SumWithBitwiseOperator s = new SumWithBitwiseOperator();
 		System.out.println(s.getSum(3, 5));
 		System.out.println(s.getDiff(3, 5));
+		System.out.println(s.findComplement(5));
 	}
 
 }
