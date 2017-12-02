@@ -28,6 +28,8 @@ public class FindMaxProduct {
 
 		int arr[] = {1, 4, 3, 6, 7, 0};
 		int arr2[] = {-1, -3, -4, 2, 0, -5};
+		findMaxProductPair(arr);
+		findMaxProductPair(arr2);
 	}
 
 }
