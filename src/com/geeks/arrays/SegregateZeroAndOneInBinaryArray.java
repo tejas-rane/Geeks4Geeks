@@ -17,7 +17,8 @@ public class SegregateZeroAndOneInBinaryArray {
 			int temp = input[index1];
 			input[index1] = input[index2];
 			input[index2]= temp;
-			
+			index1++;
+			index2--;
 		}
 		
 		for (int i : input) {
