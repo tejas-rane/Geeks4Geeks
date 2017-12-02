@@ -16,8 +16,9 @@ public class FindMinDIffInAnyTwoElemntsInArray {
 		System.out.println("Min Diff is "+ diff);
 	}
 	public static void main(String[] args) {
-		int arr[] = {1, 5, 3, 19, 18, 25}; //Minimum difference is between 18 and 19
-		int arr1[] =  new int[] {1, 19, -4, 31, 38, 25, 100};//Minimum difference is between 1 and -4
-		
+		int arr[] = {1, 5, 3, 19, 18, 25}; //Output : 1 Minimum difference is between 18 and 19
+		int arr1[] =  new int[] {1, 19, -4, 31, 38, 25, 100};// Output : 5 Minimum difference is between 1 and -4
+		findMin(arr);
+		findMin(arr1);
 	}
 }
