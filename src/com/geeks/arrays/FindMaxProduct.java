@@ -13,7 +13,14 @@ public class FindMaxProduct {
 	public static void findMaxProductPair(int arr[]){
 		Arrays.sort(arr);
 		int compute1 = arr[0]*arr[1];
+		int compute2 = arr[arr.length-2]*arr[arr.length-1];
 		
+		if(compute1 < compute2){
+			System.out.println("The pair with max product is" + " [ "+arr[arr.length-2] + " , "+arr[arr.length-1] + "]");
+		}else{
+			System.out.println("The pair with max product is" + " [ "+arr[0] + " , "+arr[1] + "]");
+			
+		}
 	}
 
 	public static void main(String[] args) {
