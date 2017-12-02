@@ -27,10 +27,10 @@ public class SumWithBitwiseOperator {
 	}
 	public int findComplement(int num) {
 		String binString = Integer.toBinaryString(num);
-		int len = binString.length();
-		int val = (int) Math.pow(2, len);
-		int nu = (num)^(val-1);
-        return nu;
+		int pow = binString.length();
+		int val = (int) Math.pow(2, pow);
+		int compliment = (num)^(val-1);
+        return compliment;
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
